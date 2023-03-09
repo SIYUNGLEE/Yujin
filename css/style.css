@@ -262,11 +262,12 @@ main h2 span::after{
 
 .education dt span{
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-size: 32px;
     font-family:  Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
-    font-weight: 100;
+    font-weight: 300;
     font-style: italic;
+    line-height: 34px;
 }
 
 .education dt:not(:first-child){
