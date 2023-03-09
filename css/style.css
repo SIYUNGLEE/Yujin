@@ -281,6 +281,10 @@ main h2 span::after{
     list-style: decimal;
 }
 
+.Publications ol li a{
+    font-weight: 700;
+}
+
 .Publications ol li a:hover{
     text-decoration: underline;
 }
@@ -291,7 +295,6 @@ main h2 span::after{
 
 .Photo ul{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     width: 1024px;
@@ -299,7 +302,7 @@ main h2 span::after{
 
 .Photo ul li{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     width: calc(33.33% - 20px);
 }
