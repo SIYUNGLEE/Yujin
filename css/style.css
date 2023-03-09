@@ -1,24 +1,24 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'SamsungOne';
+    font-family: 'KaKao';
     font-weight: 400;
-    src:  url("../assets/fonts/SamsungOne-400.woff") format('woff'),
-    url("../assets/fonts/SamsungOne-400.eot") format('eot');
+    src:  url("../assets/fonts/KakaoRegular.woff") format('woff'),
+    url("../assets/fonts/KakaoRegular.eot") format('eot');
 }
 
 @font-face {
-    font-family: 'SamsungOne';
+    font-family: 'KaKao';
     font-weight: 700;
-    src: url("../assets/fonts/SamsungOne-700.woff") format('woff'),
-    url("../assets/fonts/SamsungOne-700.eot") format('eot');
+    src: url("../assets/fonts/KakaoBold.woff") format('woff'),
+    url("../assets/fonts/KakaoBold.eot") format('eot');
 }
 
 /* reset */
 *{margin:0;padding:0;}
 *, :after, :before {box-sizing:border-box;flex-shrink:0;}
 :root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4}
-html, body {height:100%; font-family: 'SamsungOne', Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 400;}
+html, body {height:100%; font-family: 'KaKao', Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 400;}
 li{list-style: none;}
 img, picture, video, canvas, svg {display: block;max-width:100%;}
 button {background:none;border:0;cursor:pointer;}
@@ -48,7 +48,7 @@ body, a{
     align-items: center;
     gap: 80px;
     height: 50px;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     font-weight: 700;
 }
@@ -91,6 +91,7 @@ body, a{
 
 main{
     padding: 80px 20px 20px;
+    min-height: calc(100% - 75px);
     color: #333;
 }
 
@@ -122,7 +123,7 @@ main h2 span::after{
     align-items: center;
     justify-content: center;
     gap: 25px;
-    padding: 15px 0 30px;
+    padding: 15px 0;
 }
 
 .link__item a {
@@ -292,19 +293,30 @@ main h2 span::after{
     width: 1024px;
 }
 
+.Photo ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(33.33% - 20px);
+}
+
 @media screen and (max-width: 1024px) {
     .menu__pc{max-width: 1024px;}
     .menu__pc ul{gap:20px;}
     .container{width: 100%;}
     main h2 span{font-size: 32px;}
+    .Photo ul{width: 100%;}
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (max-width: 600px) {
+    .menu__pc ul{gap:10px; font-size: 14px;}
+}
+@media screen and (min-width: 400px) {
     .menu__mo{display: none;}
     .menu__pc{display: block;}
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 400px) {
     main{padding: 60px 20px 20px;}
     .menu__pc{display: none;}
     .menu__mo{display: block;}
@@ -312,7 +324,6 @@ main h2 span::after{
 }
 
 @media screen and (max-width: 501px) {
-    .menu__pc ul{gap:10px; font-size: 14px;}
     .menu__pc ul li a{padding: 5px;}
 }
 
