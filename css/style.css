@@ -90,14 +90,14 @@ body, a{
 }
 
 main{
-    padding: 80px 20px 20px;
+    padding: 100px 25px 20px;
     min-height: calc(100% - 75px);
     color: #333;
 }
 
 main h2{
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
     color: #ff9043;
     letter-spacing: -.5px;
@@ -264,7 +264,7 @@ main h2 span::after{
     display: block;
     margin-bottom: 5px;
     font-size: 32px;
-    font-family: Malgun Gothic, 맑은 고딕, sans-serif;;
+    font-family:  Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
     font-weight: 100;
     font-style: italic;
 }
@@ -278,7 +278,9 @@ main h2 span::after{
 }
 
 .Publications ol li{
+    margin-bottom: 10px;
     list-style: decimal;
+    font-size: 20px;
 }
 
 .Publications ol li a{
@@ -297,6 +299,7 @@ main h2 span::after{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-left: 20px;
     width: 1024px;
 }
 
@@ -324,10 +327,10 @@ main h2 span::after{
     .container{width: 100%;}
     main h2 span{font-size: 32px;}
     .Photo ul{width: 100%;}
-    .about img{float: none; margin-left: auto; margin-right: auto;}
 }
 
 @media screen and (max-width: 800px) {
+    .Photo ul{margin-left: 10px;}
     .Photo ul li{width: calc(50% - 20px)}
 }
 
