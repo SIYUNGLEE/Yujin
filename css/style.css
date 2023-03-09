@@ -114,7 +114,7 @@ main h2 span::after{
     display: block;
     width: 40%;
     height: 3px;
-    margin: 7px auto;
+    margin: 5px auto;
     background-color: #ff9043;
 }
 
@@ -285,6 +285,10 @@ main h2 span::after{
     text-decoration: underline;
 }
 
+.Publications ol{
+    padding-left: 20px;
+}
+
 .Photo ul{
     display: flex;
     justify-content: center;
@@ -300,6 +304,10 @@ main h2 span::after{
     width: calc(33.33% - 20px);
 }
 
+@media screen and (max-width: 1064px) {
+    .about img{float: none; margin-left: auto; margin-right: auto;}
+}
+
 @media screen and (max-width: 1024px) {
     .menu__pc{max-width: 1024px;}
     .menu__pc ul{gap:20px;}
@@ -307,20 +315,32 @@ main h2 span::after{
     main h2 span{font-size: 32px;}
     .Photo ul{width: 100%;}
 }
+@media screen and (max-width: 1024px) {
+    .menu__pc{max-width: 1024px;}
+    .menu__pc ul{gap:20px;}
+    .container{width: 100%;}
+    main h2 span{font-size: 32px;}
+    .Photo ul{width: 100%;}
+    .about img{float: none; margin-left: auto; margin-right: auto;}
+}
+
+@media screen and (max-width: 800px) {
+    .Photo ul li{width: calc(50% - 20px)}
+}
 
 @media screen and (max-width: 600px) {
     .menu__pc ul{gap:10px; font-size: 14px;}
 }
-@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 500px) {
     .menu__mo{display: none;}
     .menu__pc{display: block;}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     main{padding: 60px 20px 20px;}
     .menu__pc{display: none;}
     .menu__mo{display: block;}
-    .about img{float: none; margin-left: auto; margin-right: auto;}
 }
 
 @media screen and (max-width: 501px) {
