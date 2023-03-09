@@ -138,7 +138,6 @@ main h2 span::after{
 
 /* mobile */
 .menu__mo{
-    z-index: 50;
     position: fixed;
     left: 0;
     top: 0;
@@ -180,6 +179,7 @@ main h2 span::after{
     transition: transform 0.5s ease;
     width: 32px;
     height: 38px;
+    z-index: 50;
 }
 
 .menu__action .hamburger {
@@ -255,17 +255,17 @@ main h2 span::after{
 }
 
 .education dt{
-    margin: 5px 0;
+    margin: 5px 0 3px;
     font-size: 18px;
     font-weight: 700;
 }
 
-.education dt span{
+.education dt em{
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 32px;
     font-family:  Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
-    font-weight: 300;
+    font-weight: 200;
     font-style: italic;
     line-height: 34px;
 }
