@@ -112,7 +112,7 @@ body {
 }
 
 .menu__pc ul li a:after,
-.menu__pc ul li:checked a:after {
+.menu__pc ul li.on a:after {
     content: "";
     width: 0;
     height: 3px;
@@ -124,7 +124,7 @@ body {
 }
 
 .menu__pc ul li a:hover::after,
-.menu__pc ul li:checked a:after {
+.menu__pc ul li.on a:after {
     width: 100%;
 }
 
