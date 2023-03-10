@@ -238,29 +238,28 @@ main h2 span::after{
     max-width: 1024px;
     margin: 0 auto;
 }
-
 .about img{
     float: left;
-    margin: 0 20px 20px 0;
-}
-
-.about::after{
-    content: '';
-    display: block;
-    clear: both;
+    margin: 0 25px 25px 0;
 }
 
 .about p{
     font-size: 18px;
 }
 
-.education dt{
+.about .profile::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.list__year dt{
     margin: 5px 0 3px;
     font-size: 18px;
     font-weight: 700;
 }
 
-.education dt em{
+.list__year dt em{
     display: block;
     margin-bottom: 12px;
     font-size: 32px;
@@ -270,18 +269,18 @@ main h2 span::after{
     line-height: 34px;
 }
 
-.education dt:not(:first-child){
+.list__year dt:not(:first-child){
     margin-top: 40px;
 }
 
-.education dd{
+.list__year dd{
     font-size: 16px;
 }
 
 .Publications ol li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     list-style: decimal;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .Publications ol li a{
@@ -296,11 +295,14 @@ main h2 span::after{
     padding-left: 20px;
 }
 
+.Photo{
+    padding: 10px;
+}
+
 .Photo ul{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-left: 20px;
+    margin: auto;
     width: 1024px;
 }
 
@@ -308,6 +310,7 @@ main h2 span::after{
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin: 10px;
     width: calc(33.33% - 20px);
 }
 
@@ -321,17 +324,10 @@ main h2 span::after{
     .container{width: 100%;}
     main h2 span{font-size: 32px;}
     .Photo ul{width: 100%;}
-}
-@media screen and (max-width: 1024px) {
-    .menu__pc{max-width: 1024px;}
-    .menu__pc ul{gap:20px;}
-    .container{width: 100%;}
-    main h2 span{font-size: 32px;}
-    .Photo ul{width: 100%;}
+    main{padding: 80px 20px 20px;}
 }
 
 @media screen and (max-width: 800px) {
-    .Photo ul{margin-left: 10px;}
     .Photo ul li{width: calc(50% - 20px)}
 }
 
