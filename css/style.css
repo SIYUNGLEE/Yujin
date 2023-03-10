@@ -348,7 +348,7 @@ main h2 span::after {
 }
 
 .Photo {
-    padding: 10px;
+    margin: -10px;;
 }
 
 .Photo ul {
