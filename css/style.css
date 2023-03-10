@@ -102,7 +102,7 @@ body {
     color: #fff;
 }
 
-.menu__pc ul li.on a {
+.menu__pc ul li:checked a {
     color: #ff9043;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .menu__pc ul li a:after,
-.menu__pc ul li.on a:after {
+.menu__pc ul li:checked a:after {
     content: "";
     width: 0;
     height: 3px;
@@ -124,7 +124,7 @@ body {
 }
 
 .menu__pc ul li a:hover::after,
-.menu__pc ul li.on a:after {
+.menu__pc ul li:checked a:after {
     width: 100%;
 }
 
@@ -145,7 +145,6 @@ main h2 {
 main h2 span {
     display: inline-block;
     font-size: 42px;
-    color: #ff9043;
 }
 
 main h2 span::after {
@@ -180,8 +179,6 @@ main h2 span::after {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .menu__mo ul {
@@ -190,12 +187,10 @@ main h2 span::after {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    height: 100%;
+    width: 0;
+    height: 0;
     border: 4px solid #ff9043;
     background: rgba(0, 0, 0, .9);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s;
 }
 
 .menu__mo ul li a {
@@ -248,11 +243,19 @@ main h2 span::after {
     top: 10px;
 }
 
+#menu__hamburger + label + ul{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
 #menu__hamburger:checked + label + ul {
+    width: 100vw;
+    height: 100vh;
     visibility: visible;
-    transition: opacity 0.3s;
     opacity: 1;
 }
+
 #menu__hamburger:checked ~ .menu__action .hamburger {
     background: transparent;
 }
@@ -261,7 +264,7 @@ main h2 span::after {
 #menu__hamburger:checked ~ .menu__action .hamburger:before {
     top: 0;
     background: #ff9043;
-    transition: top 300ms 50ms ease, transform 300ms 350ms ease, background 0.3s;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease, background .3s;
 }
 
 #menu__hamburger:checked ~ .menu__action .hamburger:before {
@@ -292,6 +295,30 @@ main h2 span::after {
     clear: both;
 }
 
+.about h3 {
+    display: block;
+    margin: 50px 0 20px;
+    color: #ff9043;
+}
+
+.about h3 span {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.about h3 span::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    margin-top: 2px;
+    background-color: #ff9043;
+}
+
+.about .list__year dt em{
+    font-size: 18px;
+}
+
 .list__year span {
     display: block;
     font-size: 18px;
@@ -309,7 +336,26 @@ main h2 span::after {
     font-family: Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
     font-weight: 200;
     font-style: italic;
-    line-height: 34px;
+    line-height: 1.2;
+}
+
+.list__bar li + li{
+    margin-top: 8px;
+}
+
+.list__bar li{
+    position: relative;
+    padding-left: 12px;
+}
+
+.list__bar li:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 24px;
+    background-color: #333;
 }
 
 .list__year dt:not(:first-child) {
@@ -345,6 +391,11 @@ main h2 span::after {
 
 .project .list__year dt {
     text-align: center;
+}
+
+.project .list__year dt em{
+    font-size: 24px;
+    margin-bottom: 4px;
 }
 
 .Photo {
@@ -391,7 +442,10 @@ main h2 span::after {
         width: 100%;
     }
     main {
-        padding: 80px 20px 20px;
+        padding: 100px 20px 20px;
+    }
+    main h2 {
+        margin-bottom: 5vw;
     }
 }
 
