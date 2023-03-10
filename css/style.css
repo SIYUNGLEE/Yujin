@@ -253,15 +253,19 @@ main h2 span::after{
     clear: both;
 }
 
-.list__year dt{
-    margin: 5px 0 3px;
+.list__year span{
+    display: block;
     font-size: 18px;
     font-weight: 700;
 }
 
+.list__year dt{
+    margin: 5px 0;
+}
+
 .list__year dt em{
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 32px;
     font-family:  Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
     font-weight: 200;
@@ -273,6 +277,10 @@ main h2 span::after{
     margin-top: 40px;
 }
 
+.list__year img{
+    width: 100%;
+    margin-bottom: 10px;
+}
 .list__year dd{
     font-size: 16px;
 }
@@ -293,6 +301,10 @@ main h2 span::after{
 
 .Publications ol{
     padding-left: 20px;
+}
+
+.project .list__year dt{
+    text-align: center;
 }
 
 .Photo{
