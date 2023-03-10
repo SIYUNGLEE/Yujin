@@ -3,46 +3,85 @@
 @font-face {
     font-family: 'KaKao';
     font-weight: 400;
-    src:  url("../assets/fonts/KakaoRegular.woff") format('woff'),
-    url("../assets/fonts/KakaoRegular.eot") format('eot');
+    src: url("../assets/fonts/KakaoRegular.woff") format('woff'), url("../assets/fonts/KakaoRegular.eot") format('eot');
 }
 
 @font-face {
     font-family: 'KaKao';
     font-weight: 700;
-    src: url("../assets/fonts/KakaoBold.woff") format('woff'),
-    url("../assets/fonts/KakaoBold.eot") format('eot');
+    src: url("../assets/fonts/KakaoBold.woff") format('woff'), url("../assets/fonts/KakaoBold.eot") format('eot');
 }
 
 /* reset */
-*{margin:0;padding:0;}
-*, :after, :before {box-sizing:border-box;flex-shrink:0;}
-:root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4}
-html, body {height:100%; font-family: 'KaKao', Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 400;}
-li{list-style: none;}
-img, picture, video, canvas, svg {display: block;max-width:100%;}
-button {background:none;border:0;cursor:pointer;}
-a {text-decoration:none}
-table {border-collapse:collapse;border-spacing:0}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+:root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+body,
+html {
+    height: 100%;
+    font-family: 'KaKao', Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, sans-serif;
+    font-weight: 400;
+}
+li {
+    list-style: none;
+}
+canvas,
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* layout */
-body, a{
+a,
+body {
     color: #333;
 }
 
-#wrap{
+#wrap {
     position: relative;
     height: 100%;
 }
 
-.menu__pc{
+.menu__pc {
     position: fixed;
     width: 100%;
     margin: auto;
     background: rgba(0, 0, 0, .9);
 }
 
-.menu__pc ul{
+.menu__pc ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,23 +92,23 @@ body, a{
     font-weight: 700;
 }
 
-.menu__pc ul li{
+.menu__pc ul li {
     position: relative;
 }
 
-.menu__pc ul li a{
+.menu__pc ul li a {
     display: block;
     padding: 10px;
     color: #fff;
 }
 
-.menu__pc ul li.on a{
+.menu__pc ul li.on a {
     color: #ff9043;
 }
 
-.menu__pc ul li a:hover{
+.menu__pc ul li a:hover {
     color: #ff9043;
-    transition: color .5s;
+    transition: color 0.5s;
 }
 
 .menu__pc ul li a:after,
@@ -81,7 +120,7 @@ body, a{
     position: absolute;
     left: 0;
     bottom: 2px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .menu__pc ul li a:hover::after,
@@ -89,13 +128,13 @@ body, a{
     width: 100%;
 }
 
-main{
+main {
     padding: 100px 25px 20px;
     min-height: calc(100% - 75px);
     color: #333;
 }
 
-main h2{
+main h2 {
     display: block;
     margin-bottom: 50px;
     text-align: center;
@@ -103,13 +142,13 @@ main h2{
     letter-spacing: -.5px;
 }
 
-main h2 span{
+main h2 span {
     display: inline-block;
     font-size: 42px;
     color: #ff9043;
 }
 
-main h2 span::after{
+main h2 span::after {
     content: '';
     display: block;
     width: 40%;
@@ -133,11 +172,11 @@ main h2 span::after{
 
 .link__item a:hover {
     color: #ff9043;
-    transition: color .5s;
+    transition: color 0.5s;
 }
 
 /* mobile */
-.menu__mo{
+.menu__mo {
     position: fixed;
     left: 0;
     top: 0;
@@ -145,7 +184,7 @@ main h2 span::after{
     height: 100%;
 }
 
-.menu__mo ul{
+.menu__mo ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,10 +195,10 @@ main h2 span::after{
     background: rgba(0, 0, 0, .9);
     visibility: hidden;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
 }
 
-.menu__mo ul li a{
+.menu__mo ul li a {
     font-size: 25px;
     font-weight: 700;
     color: #fff;
@@ -209,9 +248,9 @@ main h2 span::after{
     top: 10px;
 }
 
-#menu__hamburger:checked + label + ul{
+#menu__hamburger:checked + label + ul {
     visibility: visible;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     opacity: 1;
 }
 #menu__hamburger:checked ~ .menu__action .hamburger {
@@ -222,7 +261,7 @@ main h2 span::after{
 #menu__hamburger:checked ~ .menu__action .hamburger:before {
     top: 0;
     background: #ff9043;
-    transition: top 300ms 50ms ease, transform 300ms 350ms ease, background .3s;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease, background 0.3s;
 }
 
 #menu__hamburger:checked ~ .menu__action .hamburger:before {
@@ -233,92 +272,93 @@ main h2 span::after{
     transform: rotate(-45deg);
 }
 
-.container{
+.container {
     width: 1024px;
     max-width: 1024px;
     margin: 0 auto;
 }
-.about img{
+.about img {
     float: left;
     margin: 0 25px 25px 0;
 }
 
-.about p{
+.about p {
     font-size: 18px;
 }
 
-.about .profile::after{
+.about .profile::after {
     content: '';
     display: block;
     clear: both;
 }
 
-.list__year span{
+.list__year span {
     display: block;
     font-size: 18px;
     font-weight: 700;
 }
 
-.list__year dt{
+.list__year dt {
     margin: 5px 0;
 }
 
-.list__year dt em{
+.list__year dt em {
     display: block;
     margin-bottom: 8px;
     font-size: 32px;
-    font-family:  Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
+    font-family: Apple SD Gothic Neo, Malgun Gothic, '맑은 고딕';
     font-weight: 200;
     font-style: italic;
     line-height: 34px;
 }
 
-.list__year dt:not(:first-child){
+.list__year dt:not(:first-child) {
     margin-top: 40px;
 }
 
-.list__year img{
+.list__year img {
     width: 100%;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
-.list__year dd{
+
+.list__year dd {
     font-size: 16px;
 }
 
-.Publications ol li{
+.Publications ol li {
     margin-bottom: 20px;
     list-style: decimal;
     font-size: 18px;
 }
 
-.Publications ol li a{
+.Publications ol li a {
     font-weight: 700;
 }
 
-.Publications ol li a:hover{
+.Publications ol li a:hover {
     text-decoration: underline;
 }
 
-.Publications ol{
+.Publications ol {
     padding-left: 20px;
 }
 
-.project .list__year dt{
+.project .list__year dt {
     text-align: center;
 }
 
-.Photo{
+.Photo {
     padding: 10px;
 }
 
-.Photo ul{
+.Photo ul {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     width: 1024px;
 }
 
-.Photo ul li{
+.Photo ul li {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -327,43 +367,74 @@ main h2 span::after{
 }
 
 @media screen and (max-width: 1064px) {
-    .about img{float: none; margin-left: auto; margin-right: auto;}
+    .about img {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    .menu__pc{max-width: 1024px;}
-    .menu__pc ul{gap:20px;}
-    .container{width: 100%;}
-    main h2 span{font-size: 32px;}
-    .Photo ul{width: 100%;}
-    main{padding: 80px 20px 20px;}
+    .menu__pc {
+        max-width: 1024px;
+    }
+    .menu__pc ul {
+        gap: 20px;
+    }
+    .container {
+        width: 100%;
+    }
+    main h2 span {
+        font-size: 32px;
+    }
+    .Photo ul {
+        width: 100%;
+    }
+    main {
+        padding: 80px 20px 20px;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .Photo ul li{width: calc(50% - 20px)}
+    .Photo ul li {
+        width: calc(50% - 20px);
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .menu__pc ul{gap:10px; font-size: 14px;}
+    .menu__pc ul {
+        gap: 10px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 500px) {
-    .menu__mo{display: none;}
-    .menu__pc{display: block;}
+    .menu__mo {
+        display: none;
+    }
+    .menu__pc {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 500px) {
-    main{padding: 60px 20px 20px;}
-    .menu__pc{display: none;}
-    .menu__mo{display: block;}
+    main {
+        padding: 60px 20px 20px;
+    }
+    .menu__pc {
+        display: none;
+    }
+    .menu__mo {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 501px) {
-    .menu__pc ul li a{padding: 5px;}
+    .menu__pc ul li a {
+        padding: 5px;
+    }
 }
 
-@media screen and (max-width: 365px) {
-}
+@media screen and (max-width: 365px) {}
 
-@media screen and (max-width: 320px) {
-}
+@media screen and (max-width: 320px) {}
