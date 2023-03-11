@@ -354,7 +354,7 @@ main h2 span::after {
     position: absolute;
     left: 0;
     top: 0;
-    width: 2px;
+    width: 3px;
     height: 24px;
     background-color: #333;
 }
